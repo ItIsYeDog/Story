@@ -1,0 +1,619 @@
+@import url('https://fonts.googleapis.com/css2?family=Single+Day&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap');
+
+
+body {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.title-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    font-size: 100px;
+    font-family: 'Single Day', cursive;
+    cursor: none;
+    transition: opacity 10s ease-in-out;
+}
+.fade-in {
+    color:  black;
+    font-size: 140px;
+    opacity: 0.2;
+    transition: opacity 1s ease-in-out;
+}
+
+.fade-in.active {
+    opacity: 1;
+}
+
+.section {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    background: linear-gradient(180deg, #04fafd, 5%, #119dff, 50%, #030423);
+    font-family: Arial, sans-serif;
+}
+  
+#section2 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    background-image: url('img/test.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    -webkit-animation: slidein 25s;
+    animation: slidein 25s;
+    height: 100vh;
+    overflow: hidden;
+    
+
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+}
+@-webkit-keyframes slidein {
+    from {background-position: top; background-size:2000px; }
+    to {background-position: -100px 0px;background-size:2750px;}
+}
+    
+@keyframes slidein {
+    from {background-position: top;background-size:2000px; }
+    to {background-position: -100px 0px;background-size:2750px;}
+}
+  
+.box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+    padding-left: 100px;
+    padding-right: 100px; 
+    background-color: #5cb85c;
+    animation: tap-in 2s ease-in-out infinite;
+}
+@keyframes tap-in {
+    0% {
+      transform: scale(0.9);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(0.9);
+    }
+}
+  
+.text {
+    position: relative;
+    z-index: 1;
+    opacity: 1;
+    cursor: pointer;
+    color: black;
+    font-family: 'Single Day', cursive; 
+    font-size: 60px;
+    font-weight: 1000;
+}
+.center {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      margin: auto;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: rgba(75, 75, 250, 0.3);
+      border-radius: 3px;
+}
+
+#button-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 160vh;
+}
+  
+#choice1,
+#choice2 {
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+#playAgain {
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.dietext {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Single Day', cursive; 
+    font-size: 50px;
+    color: black;
+}
+@keyframes blink {
+    0% {
+      background-color: rgba(255, 0, 0, 0);
+    }
+    50% {
+      background-color: rgba(255, 0, 0, 1);
+    }
+    100% {
+      background-color: rgba(255, 0, 0, 0);
+    }
+}
+@keyframes blink2 {
+    0% {
+      background-color: rgba(255, 0, 0, 0);
+    }
+    50% {
+      background-color: rgb(144, 238, 144);
+    }
+    100% {
+      background-color: rgba(255, 0, 0, 0);
+    }
+}
+  
+.blinking-background {
+    animation: blink 3s infinite;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.blinking-background2 {
+    animation: blink2 3s infinite;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#playAgain {
+    padding: 20px;
+    font-size: 20px;
+    font-family: 'Single Day', cursive; 
+}
+
+#section2 .title {
+    text-transform: uppercase;
+    font-family: verdana;
+    font-size: 10em;
+    font-weight: 700;
+    color: #f5f5f5;
+    text-shadow: 1px 1px 1px #919191,
+        1px 2px 1px #919191,
+        1px 3px 1px #919191,
+        1px 4px 1px #919191,
+        1px 5px 1px #919191,
+        1px 6px 1px #919191,
+        1px 7px 1px #919191,
+        1px 8px 1px #919191,
+        1px 9px 1px #919191,
+        1px 10px 1px #919191,
+    1px 18px 6px rgba(16,16,16,0.4),
+    1px 22px 10px rgba(16,16,16,0.2),
+    1px 25px 35px rgba(16,16,16,0.2),
+    1px 30px 60px rgba(16,16,16,0.4);
+}
+
+#startButton {
+    text-decoration: none !important;
+}
+
+.dropdown {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+  
+.dropbtn {
+    background-color: #5cb85c;
+    color: black;
+    padding: 10px;
+    font-size: 20px;
+    font-family: verdana;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+}
+  
+.dropdown-content {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    font-family: verdana;
+    min-width: 160px;
+    padding: 12px 16px;
+    z-index: 1;
+    width: 200px;
+    border-radius: 5px;
+}
+
+.dropbtn .icon {
+    width: 50px;
+    height: 50px; 
+    margin-bottom: -10px;
+}
+  
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.icon {
+    width: 100%;
+    height: 100%;
+    margin-right: 5px;
+}
+  
+.dropbtn {
+    display: flex;
+    align-items: center;
+}
+
+@keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+}
+  
+.dropdown:hover .icon {
+    animation: spin 1s infinite linear;
+    transform-origin: center;
+    transform-box: fill-box;
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+.dropdown:hover .icon path {
+    fill: blue; 
+}
+
+#volume {
+    width: 80%;
+    margin-left: 10px;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 15px;
+    background: #ddd;
+    outline: none;
+    transition: .2s;
+  }
+  
+  #volume:hover {
+    background: #ccc;
+  }
+  
+  #volume::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #4CAF50;
+    cursor: pointer;
+  }
+  
+  #volume::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #4CAF50;
+    cursor: pointer;
+  }
+  
+  #volumeLevel {
+    margin-left: 10px;
+  }
+
+  .image1 {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -1;
+  }
+  .image1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .bubble {
+    position: absolute;
+    top: 32%;
+    left: 68%;
+    transform: translate(-50%, -50%);
+    font-family: 'Gamja Flower', sans-serif;
+    font-size: 25px;
+    line-height: 24px;
+    width: 300px;
+    background: #fff;
+    border-radius: 40px;
+    padding: 24px;
+    text-align: center;
+    color: #000;
+  }
+  
+  .bubble-bottom-left:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 24px solid #fff;
+    border-right: 12px solid transparent;
+    border-top: 12px solid #fff;
+    border-bottom: 20px solid transparent;
+    left: 32px;
+    bottom: -24px;
+  }
+
+  .phone {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    z-index: -1;
+  }
+  .phone img {
+    width: auto;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .bubble1 {
+    position: absolute;
+    top: 40%;
+    left: 47%;
+    transform: translate(-50%, -50%);
+    font-family: 'Gamja Flower', sans-serif;
+    font-size: 22px;
+    line-height: 24px;
+    width: 300px;
+    background: #fff;
+    border-radius: 40px;
+    padding: 24px;
+    text-align: center;
+    color: #000;
+  }
+  
+  .bubble-bottom-left1:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 24px solid #fff;
+    border-right: 12px solid transparent;
+    border-top: 12px solid #fff;
+    border-bottom: 20px solid transparent;
+    left: 32px;
+    bottom: -24px;
+  }
+  .bubble2 {
+    position: absolute;
+    top: 23%;
+    left: 53%;
+    transform: translate(-50%, -50%);
+    font-family: 'Gamja Flower', sans-serif;
+    font-size: 22px;
+    line-height: 24px;
+    width: 300px;
+    background: #fff;
+    border-radius: 40px;
+    padding: 24px;
+    text-align: center;
+    color: #000;
+  }
+  .bubble-bottom-right:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-right: 24px solid #fff;
+    border-left: 12px solid transparent;
+    border-top: 12px solid #fff;
+    border-bottom: 20px solid transparent;
+    right: 32px;
+    bottom: -24px;
+  }
+  .bubble3 {
+    display: none;
+    position: absolute;
+    top: 58%;
+    left: 53%;
+    transform: translate(-50%, -50%);
+    font-family: 'Gamja Flower', sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    width: 300px;
+    background: #fff;
+    border-radius: 40px;
+    padding: 24px;
+    text-align: center;
+    color: #000;
+  }
+  .bubble-bottom-right3:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-right: 24px solid #fff;
+    border-left: 12px solid transparent;
+    border-top: 12px solid #fff;
+    border-bottom: 20px solid transparent;
+    right: 32px;
+    bottom: -24px;
+  }
+
+  .group {
+    position: fixed;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    z-index: -1;
+  }
+  .group img {
+    width: 75%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .bubble4 {
+    position: absolute;
+    top: 20%;
+    left: 53%;
+    transform: translate(-50%, -50%);
+    font-family: 'Gamja Flower', sans-serif;
+    font-size: 25px;
+    line-height: 24px;
+    width: 300px;
+    background: black;
+    border-radius: 40px;
+    padding: 24px;
+    text-align: center;
+    color: white;
+  }
+  
+  .bubble-bottom-left4:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-right: 24px solid black;
+    border-left: 12px solid transparent;
+    border-top: 12px solid black;
+    border-bottom: 20px solid transparent;
+    right: 32px;
+    bottom: -24px;
+  }
+
+  .friend {
+    position: fixed;
+    top: 48%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    z-index: -1;
+  }
+  .friend img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  .background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    background-image: url('img/brick-wall.png');
+    z-index: -2;
+  }
+  .school {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -1;
+  }
+  .school img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .bubble5 {
+    position: absolute;
+    top: 27%;
+    left: 78%;
+    transform: translate(-50%, -50%);
+    font-family: 'Gamja Flower', sans-serif;
+    font-size: 25px;
+    line-height: 24px;
+    width: 300px;
+    background: black;
+    border-radius: 40px;
+    padding: 24px;
+    text-align: center;
+    color: white;
+  }
+  
+  .bubble-bottom-left5:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-right: 24px solid black;
+    border-left: 12px solid transparent;
+    border-top: 12px solid black;
+    border-bottom: 20px solid transparent;
+    right: 32px;
+    bottom: -24px;
+  }
+  .bubble6 {
+    position: absolute;
+    top: 23%;
+    left: 63%;
+    transform: translate(-50%, -50%);
+    font-family: 'Gamja Flower', sans-serif;
+    font-size: 25px;
+    line-height: 24px;
+    width: 300px;
+    background: black;
+    border-radius: 40px;
+    padding: 24px;
+    text-align: center;
+    color: white;
+  }
+  
+  .bubble-bottom-left6:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-right: 24px solid black;
+    border-left: 12px solid transparent;
+    border-top: 12px solid black;
+    border-bottom: 20px solid transparent;
+    right: 32px;
+    bottom: -24px;
+  }
